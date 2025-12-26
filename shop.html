@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ja Morant 12 | Shop</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            padding-top: 80px;
+        }
+
+        footer {
+            margin-top: auto;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Ja 12</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="story.html">Journey</a></li>
+            <li><a href="career.html">Stats</a></li>
+            <li><a href="highlights.html">Highlights</a></li>
+            <li><a href="shop.html" class="active">Shop</a></li>
+        </ul>
+        <div class="cart-icon">
+            <i class="fas fa-shopping-bag"></i>
+            <span id="cart-count">0</span>
+        </div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <!-- Shop Section -->
+    <section id="shop" class="shop-section">
+        <h2 class="section-title" data-aos="fade-up">Ja Store</h2>
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card" data-aos="fade-up">
+                <span class="badge">Bestseller</span>
+                <div class="product-image">
+                    <img src=https://sneakerfreak.ru/wp-content/uploads/2022/12/321501713_810263856731933_4749993249008575751_n-scaled.jpg
+                        alt="Ja 1 Day One">
+                </div>
+                <h3>Nike Ja 1 "Day One"</h3>
+                <p class="price">$110.00</p>
+                <button class="btn add-to-cart" data-id="1" data-name="Nike Ja 1 Day One" data-price="110.00"
+                    data-img="https://sneakerfreak.ru/wp-content/uploads/2022/12/321501713_810263856731933_4749993249008575751_n-scaled.jpg">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="product-image">
+                    <img src=https://img.championat.com/i/m/j/1646675123109866536.jpg alt="Ja Jersey">
+                </div>
+                <h3>Grizzlies Jersey</h3>
+                <p class="price">$120.00</p>
+                <button class="btn add-to-cart" data-id="2" data-name="Grizzlies Jersey" data-price="120.00"
+                    data-img="https://img.championat.com/i/m/j/1646675123109866536.jpg">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                <span class="badge">Sale</span>
+                <div class="product-image">
+                    <img src=https://content2.rozetka.com.ua/goods/images/big/327422131.jpg alt="Ja Hoodie">
+                </div>
+                <h3>"Temetrius" Hoodie</h3>
+                <p class="price">$65.00</p>
+                <button class="btn add-to-cart" data-id="3" data-name="Temetrius Hoodie" data-price="65.00"
+                    data-img="https://content2.rozetka.com.ua/goods/images/big/327422131.jpg">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- Product 4 (New) -->
+            <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+                <span class="badge">New</span>
+                <div class="product-image">
+                    <!-- Using CSS hue-rotate to simulate different colorway -->
+                    <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHjqyH-dn3edeyub-0PAiceLXqNKNMqxiTxg&s
+                        style="filter: hue-rotate(90deg);" alt="Ja 1 Zombie">
+                </div>
+                <h3>Nike Ja 1 "Zombie"</h3>
+                <p class="price">$110.00</p>
+                <button class="btn add-to-cart" data-id="4" data-name="Nike Ja 1 Zombie" data-price="110.00"
+                    data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHjqyH-dn3edeyub-0PAiceLXqNKNMqxiTxg&s">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- Product 5 (New)-->
+            <div class="product-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="product-image">
+                    <img src=https://static.nike.com/a/images/f_auto,cs_srgb/w_960,c_limit/e21bcf6a-82c6-46de-8623-067a2a2eb0c7/the-ja-3-release-is-morant-s-most-personalised-shoe-to-date.jpg
+                        style="filter: grayscale(100%);" alt="Retro Tee">
+                </div>
+                <h3>Retro Graphic Tee</h3>
+                <p class="price">$35.00</p>
+                <button class="btn add-to-cart" data-id="5" data-name="Retro Graphic Tee" data-price="35.00"
+                    data-img="https://static.nike.com/a/images/f_auto,cs_srgb/w_960,c_limit/e21bcf6a-82c6-46de-8623-067a2a2eb0c7/the-ja-3-release-is-morant-s-most-personalised-shoe-to-date.jpg">
+                    Add to Cart
+                </button>
+            </div>
+            <!-- Product 6 (New) -->
+            <div class="product-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="product-image">
+                    <img src=https://outmaxshop.ru/images/_NEWS2025_/novosti_SEO/12.11/ja-morant-shoes-nike-ja-3-2025-2.jpg
+                        style="filter: hue-rotate(180deg) invert(10%);" alt="Ja 1 Ember">
+                </div>
+                <h3>Nike Ja 1 "Ember"</h3>
+                <p class="price">$110.00</p>
+                <button class="btn add-to-cart" data-id="6" data-name="Nike Ja 1 Ember" data-price="110.00"
+                    data-img="https://outmaxshop.ru/images/_NEWS2025_/novosti_SEO/12.11/ja-morant-shoes-nike-ja-3-2025-2.jpg">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>Ja Morant 12</h3>
+            <p>The future of the point guard position.</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Ja Morant Fan Page. Designed with <i class="fas fa-bolt"></i></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

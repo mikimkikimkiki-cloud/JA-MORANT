@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ja Morant 12 | Highlights</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            padding-top: 80px;
+        }
+
+        footer {
+            margin-top: auto;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Ja 12</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="story.html">Journey</a></li>
+            <li><a href="career.html">Stats</a></li>
+            <li><a href="highlights.html" class="active">Highlights</a></li>
+            <li><a href="shop.html">Shop</a></li>
+        </ul>
+        <div class="cart-icon">
+            <i class="fas fa-shopping-bag"></i>
+            <span id="cart-count">0</span>
+        </div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <!-- Highlights Section -->
+    <section id="highlights" class="highlights-section">
+        <h2 class="section-title" data-aos="fade-up">Top Plays</h2>
+        <div class="filter-buttons" data-aos="fade-up">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="dunk">Dunks</button>
+            <button class="filter-btn" data-filter="clutch">Clutch</button>
+        </div>
+        <div class="video-grid">
+            <!-- Using YouTube embeds for stability -->
+            <div class="video-card dunk" data-aos="flip-left">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/u_4GV1Abn-Q?si=NWkOwOVWJl14ae4f"
+                    title="Ja Morant Dunks" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div class="info">
+                    <h4>Monster Dunk</h4>
+                </div>
+            </div>
+            <div class="video-card clutch" data-aos="flip-left" data-aos-delay="100">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/_n0Y24fyylI?si=N7iT5gZCBUK6rJil"
+                    title="Ja Morant Clutch" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div class="info">
+                    <h4>Game Winner</h4>
+                </div>
+            </div>
+            <div class="video-card dunk" data-aos="flip-left" data-aos-delay="200">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/UJaHRvf0QVM?si=7vQ_p9NCc8XwUB8B"
+                    title="Ja Morant Block" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div class="info">
+                    <h4>The Block</h4>
+                </div>
+            </div>
+            <!-- Dunk on Yuta -->
+            <div class="video-card dunk" data-aos="flip-left">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/vhyNKvEuixE?si=VHK43WMjKOCh_Z_R"
+                    title="Dunk on Yuta" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div class="info">
+                    <h4>The Dunk of the Year?</h4>
+                </div>
+            </div>
+            <!-- Dunk on Poeltl -->
+            <div class="video-card dunk" data-aos="flip-left" data-aos-delay="100">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/GhgSLqxJ_ws?si=2bRz-5Sq5x1idWxN"
+                    title="Dunk on Poeltl" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div class="info">
+                    <h4>Poster on Poeltl</h4>
+                </div>
+            </div>
+            <!-- 52 Points -->
+            <div class="video-card clutch" data-aos="flip-left" data-aos-delay="200">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/xyyUjhIBEwY?si=mhAZFK_uD5_KfJtu"
+                    title="52 Points" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div class="info">
+                    <h4>Career High 52 PTS</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>Ja Morant 12</h3>
+            <p>The future of the point guard position.</p>
+            <ul class="socials">
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Ja Morant Fan Page. Designed with <i class="fas fa-bolt"></i></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

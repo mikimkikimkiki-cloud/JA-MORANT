@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ja Morant 12 | Cart</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            padding-top: 80px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .cart-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .cart-container h2 {
+            margin-bottom: 30px;
+            color: var(--primary-color);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+        }
+
+        .cart-items {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .cart-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            background: #fff;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+
+        .item-details {
+            flex-grow: 1;
+        }
+
+        .item-details h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .item-details .item-price {
+            color: var(--highlight-color);
+            font-weight: bold;
+        }
+
+        .btn-remove {
+            background: rgba(255, 0, 0, 0.2);
+            border: 1px solid rgba(255, 0, 0, 0.5);
+            color: #ffcccc;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-remove:hover {
+            background: rgba(255, 0, 0, 0.5);
+        }
+
+        .cart-summary {
+            margin-top: 30px;
+            text-align: right;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+        }
+
+        .total-price {
+            font-size: 1.5rem;
+            color: var(--highlight-color);
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .empty-cart-msg {
+            text-align: center;
+            padding: 50px;
+            font-size: 1.2rem;
+            color: #777;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 500px;
+            border: 1px solid var(--primary-color);
+        }
+
+        .modal-icon {
+            font-size: 4rem;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Ja 12</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+        </ul>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <div class="cart-container" data-aos="fade-up">
+        <h2>Your Cart</h2>
+        <div id="cart-items" class="cart-items">
+            <!-- Items will be injected here -->
+        </div>
+
+        <div id="cart-summary" class="cart-summary" style="display: none;">
+            <span>Total:</span> <span id="cart-total" class="total-price">$0.00</span>
+            <button id="checkout-btn" class="btn btn-primary" onclick="checkout()">Proceed to Checkout</button>
+        </div>
+
+        <div id="empty-cart" class="empty-cart-msg">
+            Your cart is empty. <a href="shop.html" style="color: var(--primary-color);">Go Shopping</a>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon"><i class="fas fa-check-circle"></i></div>
+            <h3>Thank You!</h3>
+            <p>Your order has been placed successfully.</p>
+            <button class="btn btn-primary" style="margin-top: 20px;" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <h3>Ja Morant 12</h3>
+            <p>The future of the point guard position.</p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Ja Morant Fan Page. Designed with <i class="fas fa-bolt"></i></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
